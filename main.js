@@ -51,6 +51,8 @@ formElement.addEventListener('submit', function (event) {
 
     console.log(priceFixed)
 
+    
+
     toggleDisplay('ticket-preview')
 
 })
