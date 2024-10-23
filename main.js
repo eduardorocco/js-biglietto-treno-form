@@ -5,15 +5,15 @@
 
 
 
-const userKm = document.getElementById('user-km') //km dell'utente //number
+const userKm = document.getElementById('user-km') //km dell'utente 
 
-const userAge = document.getElementById('user-age')  //età utente //number
+const userAge = document.getElementById('user-age')  //età utente 
 
 const costXkm = 0.21 //number (decimale)
 
 const formElement = document.getElementById('form-km')
 
-console.log(formElement)
+//console.log(formElement)
 
 formElement.addEventListener('submit', function (event) {
    
@@ -21,7 +21,13 @@ formElement.addEventListener('submit', function (event) {
 
     const km = parseInt(userKm.value)
 
-    console.log(km)
+    const age = userAge.value
+
+    console.log(km, age)
+
+    
+
+    
 })
   
 
