@@ -1,5 +1,3 @@
-console.log('Ciao')
-
 //PREZZO al km = 0.21 euro
 // 20 % ai minorenni
 // 40 % agli over 65
@@ -7,9 +5,29 @@ console.log('Ciao')
 
 
 
-const userKm =  parseInt(prompt('Inserisci i kilometri da percorrere:')) //km dell'utente //number
-const userAge = parseInt(prompt('Inserisci la tua età:'))  //età utente //number
+const userKm = document.getElementById('user-km') //km dell'utente //number
+
+const userAge = document.getElementById('user-age')  //età utente //number
+
 const costXkm = 0.21 //number (decimale)
+
+const formElement = document.getElementById('form-km')
+
+console.log(formElement)
+
+formElement.addEventListener('submit', function (event) {
+   
+    event.preventDefault()
+
+    const km = parseInt(userKm.value)
+
+    console.log(km)
+})
+  
+
+    
+
+
 
 
 //console.log(userKm, userAge, costXkm)
