@@ -8,15 +8,27 @@
 </head>
 <body>
 
-    <section class="container">
+    <main class="container">
 
+
+        <!--FORM-->
         <section id="add-element" class="mt-4">
 
-            <h2 class="mb-3">Biglietto treno</h2>
+            <h2 class="mb-3">Calcola il biglietto del treno</h2>
 
-            <form action="" method="get" id="form-km">
+            <form action="" method="get" id="form-km" class="row">
 
-              <div class="mb-3">
+                <div class="mb-3 col-4">
+
+                    <label for="new-element" class="form-label">Nome e Cognome</label>
+    
+                    <input type="text" name="name" class="form-control" id="user-name">
+    
+    
+                </div>
+
+                 
+              <div class="mb-3 col-4">
 
                 <label for="new-element" class="form-label">Km</label>
 
@@ -25,7 +37,7 @@
 
               </div>
 
-              <div>
+              <div class="mb-3 col-4">
 
                 <label for="new-element" class="form-label">Età</label>
 
@@ -43,13 +55,23 @@
               
               <div>
 
-                <button type="submit" class="btn btn-primary">Stampa Biglietto</button>
+                <button type="submit" class="btn btn-primary mt-3">Stampa Biglietto</button>
 
               </div>
               
             </form>
 
-    </section>
+        </section>
+        <!--/FORM-->
+
+        <!--TICKET-PREVIEW-->
+        <section class="mt-5" id="ticket-preview">
+
+            <h3>Anteprima biglietto</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias minima perferendis aspernatur modi, ex fugiat provident eos debitis ad reprehenderit vitae odit rerum dicta! Enim explicabo expedita architecto maxime perferendis!</p>
+
+        </section>
+    </main>
     
 
     <script src="/main.js"></script>
