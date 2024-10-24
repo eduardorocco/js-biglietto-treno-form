@@ -34,13 +34,8 @@ formElement.addEventListener('submit', function (event) {
 
     let discout = 0
 
-    let price = kmPrice - discout
     
-    let priceFixed = price.toFixed(2)
-
-
-    console.log(priceFixed)
-
+    
     //TICKET PREViEW
 
     ticketTable.innerHTML += `<td >${travelerName}</td>`
@@ -62,6 +57,11 @@ formElement.addEventListener('submit', function (event) {
         ticketTable.innerHTML += `<td >Biglietto Strandard</td>`
 
     }
+
+    let price = kmPrice - discout
+
+    let priceFixed = price.toFixed(2)
+
 
     ticketTable.innerHTML += `<td >${carriageNum()}</td>`
 
