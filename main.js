@@ -32,11 +32,18 @@ formElement.addEventListener('submit', function (event) {
 
     const kmPrice =  km * costXkm 
 
-    ticketTable.innerHTML += `<td >${travelerName}</td>`
-
-    
-
     let discout = 0
+
+    let price = kmPrice - discout
+    
+    let priceFixed = price.toFixed(2)
+
+
+    console.log(priceFixed)
+
+    //TICKET PREViEW
+
+    ticketTable.innerHTML += `<td >${travelerName}</td>`
 
     if (age === 'under18') {
 
@@ -56,24 +63,26 @@ formElement.addEventListener('submit', function (event) {
 
     }
 
+    ticketTable.innerHTML += `<td >${carriageNum()}</td>`
+
+    ticketTable.innerHTML += `<td >${CPcodeNum()}</td>`
+
+    ticketTable.innerHTML += `<td >${priceFixed} €</td>`
 
 
-    let price = kmPrice - discout
-    
-    let priceFixed = price.toFixed(2)
 
 
-    console.log(priceFixed)
+
 
    
     
 
 
 
-    console.log(travelerName)
+    //console.log(travelerName)
 
 
-
+    //DISPLAY FUNCTION
 
     toggleDisplay('ticket-preview')
 
@@ -91,3 +100,15 @@ function toggleDisplay(id) {
 
     }
 }
+
+
+function carriageNum() {
+    return Math.floor(Math.random() * 9) + 1
+}
+
+
+
+function CPcodeNum() {
+    return Math.floor(Math.random() * 999 + 9000) + 1
+}
+
