@@ -4,17 +4,25 @@
 //output prezzo finale max 2 cifre dopo la virgola
 
 
+//CONST UI
+
 const userKm = document.getElementById('user-km') //km dell'utente 
 
 const userAge = document.getElementById('user-age')  //età utente 
 
+const userName = document.getElementById('user-name') //nome utente
+
+
+// CONST PRIZE CALCULATOR
+
 const costXkm = 0.21 //number (decimale)
+
+
+// CONST FORM
 
 const formElement = document.getElementById('form-km')
 
 const ticketPreview = document.getElementById('ticket-preview').style.display = 'none'
-
-const userName = document.getElementById('user-name')
 
 const ticketTable = document.getElementById('ticket-table')
 
@@ -71,7 +79,7 @@ formElement.addEventListener('submit', function (event) {
 
     ticketTable.innerHTML += `<td >${priceFixed} €</td>`
 
-    //TICKET PREVIEW
+    //!TICKET PREVIEW
 
     //console.log(travelerName)
 
