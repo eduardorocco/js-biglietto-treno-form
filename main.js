@@ -4,7 +4,6 @@
 //output prezzo finale max 2 cifre dopo la virgola
 
 
-
 const userKm = document.getElementById('user-km') //km dell'utente 
 
 const userAge = document.getElementById('user-age')  //età utente 
@@ -23,6 +22,9 @@ const ticketTable = document.getElementById('ticket-table')
 formElement.addEventListener('submit', function (event) {
    
     event.preventDefault()
+
+    
+    //CONST PRIZE CALCULATOR
 
     const km = parseInt(userKm.value)
 
@@ -69,15 +71,7 @@ formElement.addEventListener('submit', function (event) {
 
     ticketTable.innerHTML += `<td >${priceFixed} €</td>`
 
-
-
-
-
-
-   
-    
-
-
+    //TICKET PREVIEW
 
     //console.log(travelerName)
 
@@ -85,6 +79,8 @@ formElement.addEventListener('submit', function (event) {
     //DISPLAY FUNCTION
 
     toggleDisplay('ticket-preview')
+
+    console.log(priceFixed)
 
 })
 
