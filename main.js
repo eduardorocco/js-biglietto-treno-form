@@ -29,6 +29,8 @@ const ticketTable = document.getElementById('ticket-table')
 
 formElement.addEventListener('submit', function (event) {
    
+    ticketTable.innerHTML = ''
+
     event.preventDefault()
 
     
@@ -88,9 +90,18 @@ formElement.addEventListener('submit', function (event) {
 
     toggleDisplay('ticket-preview')
 
+    
+
     console.log(priceFixed)
 
 })
+
+formElement.addEventListener('reset', function (event) {
+
+    toggleDisplay('ticket-preview')
+    
+})
+
 
 
 function toggleDisplay(id) {
@@ -102,6 +113,8 @@ function toggleDisplay(id) {
 
         element.style.display = "block"
 
+    } else {
+        element.style.display = "none"
     }
 }
 
